@@ -51,19 +51,74 @@
 
     <div class="question">
         <h2>2.1 Fill-in-the-blank</h2>
-        <!-- Replace with actual questions -->
-        <label>a) Function:
+        <label>a) Every C program begins execution at the function:
             <select><option></option><option>scanf</option><option>main</option><option>printf</option></select>
         </label>
-        <!-- Repeat other 2.1 questions -->
+        <label>b) Every function’s body begins with:
+            <select><option></option><option>(</option><option>[</option><option>{</option></select> and ends with:
+            <select><option></option><option>}</option><option>)</option><option>;</option></select>
+        </label>
+        <label>c) Every statement ends with a(n):
+            <select><option></option><option>}</option><option>;</option><option>:</option></select>
+        </label>
+        <label>d) The ______ standard library function displays information:
+            <select><option></option><option>scanf</option><option>main</option><option>printf</option></select>
+        </label>
+        <label>e) The escape sequence \n represents the:
+            <select><option></option><option>newline</option><option>tab</option><option>space</option></select> character
+        </label>
+        <label>f) The ______ function obtains data from the keyboard:
+            <select><option></option><option>main</option><option>printf</option><option>scanf</option></select>
+        </label>
+        <label>g) The conversion specifier for an integer:
+            <select><option></option><option>%s</option><option>%d</option><option>%f</option></select>
+        </label>
+        <label>h) Overriding a memory value is called:
+            <select><option></option><option>non-destructive</option><option>destructive</option></select>
+        </label>
+        <label>i) Reading a value without changing it is called:
+            <select><option></option><option>non-destructive</option><option>destructive</option></select>
+        </label>
+        <label>j) The ______ statement is used to make decisions:
+            <select><option></option><option>while</option><option>if</option><option>for</option></select>
+        </label>
     </div>
 
     <div class="question">
         <h2>2.2 True or False</h2>
-        <label>a)
+        <label>a) Function printf always begins printing at the beginning of a new line.
             <select><option></option><option>True</option><option>False</option></select>
         </label>
-        <!-- Repeat other 2.2 questions -->
+        <label>b) Comments cause the computer to display the text after // on the screen when the program is executed.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>c) The escape sequence \n in a printf format control string positions the output cursor to the beginning of the next line.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>d) All variables must be defined before they’re used.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>e) All variables must be given a type when they’re defined.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>f) C considers the variables number and NuMbEr to be identical.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>g) Definitions can appear anywhere in the body of a function.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>h) All arguments in the printf function must be preceded by an ampersand (&).
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>i) The remainder operator (%) can be used only with integer operands.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>j) A program that prints three lines must contain three printf statements.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
+        <label>k) A C program that prints three lines of output must contain three printf statements, one per line of output.
+            <select><option></option><option>True</option><option>False</option></select>
+        </label>
     </div>
 
     <button id="submit-btn" onclick="checkAnswers()">Submit</button>
@@ -74,7 +129,7 @@
         function checkAnswers() {
             const correctAnswers = [
                 "main", "{", "}", ";", "printf", "newline", "scanf", "%d", "destructive", "non-destructive", "if",
-                "False", "False", "True", "True", "True", "False", "True", "False", "True", "False"
+                "False", "False", "True", "True", "True", "False", "True", "False", "True", "False", "False"
             ];
             const selects = document.querySelectorAll("select");
             let score = 0;
