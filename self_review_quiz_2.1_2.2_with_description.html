@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Programming Self-Review Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <p style="font-size: 18px; background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 8px;">
+        👋 Welcome! This interactive quiz helps you practice C Programming <strong>Self-Review Exercises 2.1 and 2.2</strong>. Select your answers and press Submit to check your score.
+    </p>
+    <h1>C Programming Self-Review Quiz</h1>
+
+    <div class="question">
+        <h2>2.1 Fill-in-the-blank</h2>
+        <label>a) Every C program begins execution at the function:
+            <select><option></option>
+                <option>scanf</option>
+                <option>main</option>
+                <option>printf</option>
+            </select>
+        </label>
+        <label>b) Every function’s body begins with:
+            <select><option></option>
+                <option>(</option>
+                <option>[</option>
+                <option>{</option>
+            </select> and ends with:
+            <select><option></option>
+                <option>}</option>
+                <option>)</option>
+                <option>;</option>
+            </select>
+        </label>
+        <label>c) Every statement ends with a(n):
+            <select><option></option>
+                <option>}</option>
+                <option>;</option>
+                <option>:</option>
+            </select>
+        </label>
+        <label>d) The ______ standard library function displays information:
+            <select><option></option>
+                <option>scanf</option>
+                <option>main</option>
+                <option>printf</option>
+            </select>
+        </label>
+        <label>e) The escape sequence \n represents the:
+            <select><option></option>
+                <option>newline</option>
+                <option>tab</option>
+                <option>space</option>
+            </select> character
+        </label>
+        <label>f) The ______ function obtains data from the keyboard:
+            <select><option></option>
+                <option>main</option>
+                <option>printf</option>
+                <option>scanf</option>
+            </select>
+        </label>
+        <label>g) The conversion specifier for an integer:
+            <select><option></option>
+                <option>%s</option>
+                <option>%d</option>
+                <option>%f</option>
+            </select>
+        </label>
+        <label>h) Overriding a memory value is called:
+            <select><option></option>
+                <option>non-destructive</option>
+                <option>destructive</option>
+            </select>
+        </label>
+        <label>i) Reading a value without changing it is called:
+            <select><option></option>
+                <option>non-destructive</option>
+                <option>destructive</option>
+            </select>
+        </label>
+        <label>j) The ______ statement is used to make decisions:
+            <select><option></option>
+                <option>while</option>
+                <option>if</option>
+                <option>for</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="question">
+        <h2>2.2 True or False</h2>
+        <label>a) Function printf always begins printing at the beginning of a new line.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>b) Comments cause the computer to display the text after // on the screen when the program is executed.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>c) The escape sequence \n in a printf format control string positions the output cursor to the beginning of the next line.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>d) All variables must be defined before they’re used.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>e) All variables must be given a type when they’re defined.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>f) C considers the variables number and NuMbEr to be identical.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>g) Definitions can appear anywhere in the body of a function.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>h) All arguments in printf must be preceded by an ampersand (&).
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>i) The remainder operator (%) can be used only with integer operands.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+        <label>j) A program that prints three lines must contain three printf statements.
+            <select><option></option>
+                <option>True</option>
+                <option>False</option>
+            </select>
+        </label>
+    </div>
+
+    <button onclick="checkAnswers()" style="padding: 10px 20px; font-size: 18px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;">Submit</button>
+    <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = [
+                "main", "{", "}", ";", "printf", "newline", "scanf", "%d", "destructive", "non-destructive", "if",
+                "False", "False", "True", "True", "True", "False", "True", "False", "True", "False"
+            ];
+            const selects = document.querySelectorAll("select");
+            let score = 0;
+
+            selects.forEach((select, index) => {
+                const userAnswer = select.value.trim();
+                if (userAnswer === correctAnswers[index]) {
+                    score++;
+                    select.style.backgroundColor = "#c8f7c5";
+                } else {
+                    select.style.backgroundColor = "#f7c5c5";
+                }
+            });
+
+            const total = correctAnswers.length;
+            const percent = (score / total) * 100;
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `You got ${score} out of ${total} (${percent.toFixed(1)}%) correct.`;
+
+            if (percent > 69) {
+                resultDiv.innerHTML += "<br><span style='color: green;'><span style='color: white; background-color: #4CAF50; padding: 10px; border-radius: 8px; display: inline-block;'>🎉 Congratulations! 🎉</span></span>";
+            } else {
+                resultDiv.innerHTML += "<br><span style='color: red;'>Keep practicing!</span>";
+            }
+        }
+    </script>
+</body>
+
+</html>
